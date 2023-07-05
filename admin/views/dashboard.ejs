@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>wellcome in dashboard</h1>
+
+    <br><br><br>
+    <a href="add_user"><input type="button" value="add_user"></a>
+    <a href="add_task"><input type="button" value="add_task"></a>
+    <a href="logout"><input type="button" value="logout"></a>
+    <br><br><br>
+    <a href="pandding_task"><input type="button" value="pandding"></a>
+    <a href="complete_task"><input type="button" value="complete"></a>
+    <a href="decline_task"><input type="button" value="decline"></a>
+
+    <br><br><br>
+
+    <table border="" width="80%" align="center">
+        <th>Id</th>
+        <th>Task</th>
+        <th>User</th>
+        <th>Status</th>
+
+        <% results.forEach(function(harsh){ %>
+            <tr>
+                <td><%= harsh.id%></td>
+                <td><%= harsh.task%></td>
+                <td><%= harsh.name%></td>
+                <td>
+
+                    <% if (harsh.status==1) { %>
+                        <b>Completed</b>
+                    <% } else if(harsh.status==2) { %>
+                        <b>Declined</b>
+                    <% } else { %>
+                        <b>Pending</b>
+                    <% } %>
+
+                </td>
+
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

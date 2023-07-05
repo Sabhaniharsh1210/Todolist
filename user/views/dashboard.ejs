@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Wellcome to user dashboard</h1>
+    
+
+    <a href="logout"><input type="button" value="logout"></a>
+<br><br>
+<a href="complete_task"><input type="button" value="complete"></a>
+<a href="decline_task"><input type="button" value="decline"></a>
+<br><br><br>
+    <table border="" width="80%" align="center">
+        <th width="10%">No</th>
+        <th>Task Name</th>
+        <th width="10%">Complete</th>
+        <th width="10%"><a href="delete/"></a>Declaine</th>
+
+    <% results.forEach(function(harsh){ %>
+        <tr>
+            <td><%= harsh.id%></td>
+            <td><%= harsh.task%></td>
+            <td><a href="done/<%= harsh.id%>">Complete</a></td>
+            <td><a href="delete/<%= harsh.id%>">Declain</a></td>
+
+            
+            
+        </tr>
+    <% }) %>
+
+    </table>
+
+</body>
+</html>

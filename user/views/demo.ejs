@@ -1,0 +1,127 @@
+//  app.get('/',async function(req,res){
+    //     await storage.init();
+    //     var user_login = await storage.getItem('admin_login')
+    
+    //     if(user_login == 1)
+    //     {
+    //         res.render('dashboard')
+    //     }
+    //     else
+    //     {
+    //         res.render('index')
+    //     }
+    
+    // })
+    
+    // login in dashboard
+    
+    // app.get('/dashboard',async function(req,res){
+    //     await storage.init();
+    //     var user_login = await storage.getItem('admin_login')
+    //     var qurey = "select count(*) as row_count from user"
+    //     var pandding = "select count(*) as row_count from task where status = 0";
+    
+    
+    //     connection.query(qurey, function(error,results,fields){
+    
+    //         if(user_login == 1)
+    //         {
+    //             res.render('dashboard',{data: results[0].row_count})
+    //         }
+    //         else
+    //         {
+    //             res.render('index')
+    //         }
+    
+    //     })
+    
+    //     connection.query(pandding, function(error,results,fields){
+    
+    //         if(user_login == 1)
+    //         {
+    //             res.render('dashboard',{data1: results[0].row_count})
+    //         }
+    //         else
+    //         {
+    //             res.render('index')
+    //         }
+    
+    //     })
+    
+    
+    
+    // })
+    
+    // app.post('/',async function(req,res){
+    //     var name = req.body.username;
+    //     var pass = req.body.password;
+    
+    //     var query = "select * from admin where username = '"+name+"' and password = '"+pass+"' ";
+    
+    //     connection.query(query,async function (error, results, fields) {
+    //         if (error) throw error;
+            
+    //         if(results.length == 1)
+    //         {
+    //             await storage.init();
+    //             await storage.setItem('admin_login',1)
+    //             res.redirect('dashboard')
+    //         }
+    //         else{
+    //             res.render('index')
+    //         }
+    //       });
+    // })
+    
+    
+    
+    
+    // app.get('/logout',async function(req,res){
+    //     await storage.init();
+    //     await storage.setItem('admin_login',0)
+    //     res.redirect('/')
+    // })
+    
+    
+    // app.get('/add_user', function(req,res){
+    //     res.render('add_user')
+    // })
+    
+    // app.post('/add_user',function(req,res){
+    //     var name = req.body.name;
+    //     var email = req.body.email;
+    //     var password = req.body.password;
+    //     var contact = req.body.contact;
+    
+    //     var query =  " insert into user (name,email,password,contact) values ('"+name+"','"+email+"','"+password+"','"+contact+"') "
+        
+    //     connection.query(query, function (error, results, fields) {
+    //         if (error) throw error;
+    //         res.redirect('/add_user')
+    //       });
+    
+    // })
+    
+    // app.get('/add_task',function(req,res){
+    
+    //     var select_user = "select * from user"
+    //     connection.query(select_user, function (error, results, fields) {
+    //         if (error) throw error;
+    //         res.render('add_task',{results})
+    //       });
+    
+    
+    // })
+    
+    // app.post('/add_task',function(req,res){
+    //     var user_id = req.body.user_id;
+    //     var task = req.body.task;
+    
+    //     var query =  " insert into task (task,user_id) values ('"+task+"','"+user_id+"') "
+        
+    //     connection.query(query, function (error, results, fields) {
+    //         if (error) throw error;
+    //         res.redirect('/add_task')
+    //       });
+    
+    // })

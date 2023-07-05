@@ -1,0 +1,19 @@
+<h1>penddig task</h1>
+<a href="dashboard"><input type="button" value="dashboard"></a>
+<br><br><br>
+<table border="" width="80%" align="center">
+    <th>Id</th>
+    <th>Task</th>
+    <th>User Id</th>
+    <th>Status</th>
+
+    <% results.forEach(function(harsh){ %>
+        <tr>
+            <td><%= harsh.id%></td>
+            <td><%= harsh.task%></td>
+            <td><%= harsh.name%></td>
+            <td><%= harsh.status%></td>
+            
+        </tr>
+    <% }) %>
+</table>

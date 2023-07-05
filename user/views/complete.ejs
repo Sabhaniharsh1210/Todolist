@@ -1,0 +1,18 @@
+<h1>complete task</h1>
+<br>
+<a href="dashboard"><input type="button" value="dashboard"></a>
+<br><br><br>
+<table border="" width="80%" align="center">
+    <th width="10%">Id</th>
+    <th>Task</th>
+
+
+    <% results.forEach(function(harsh){ %>
+        <tr>
+            <td><%= harsh.id%></td>
+            <td><%= harsh.task%></td>
+
+            
+        </tr>
+    <% }) %>
+</table>
